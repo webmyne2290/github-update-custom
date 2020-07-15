@@ -9,7 +9,7 @@ class UPDGitHubPluginUpdater {
     private $githubAPIResult; // holds data from GitHub
     private $accessToken; // GitHub private repo token
  
-    function __construct( $pluginFile, $gitHubUsername, $gitHubProjectName, $accessToken = '39281be0eddbc611d079f28d9a417b9f8251e917' ) {
+    function __construct( $pluginFile, $gitHubUsername, $gitHubProjectName, $accessToken = '41cab6c515b45578e33ad01db43c94caa56cf9d6' ) {
         add_filter( "pre_set_site_transient_update_plugins", array( $this, "setTransitent" ) );
         add_filter( "plugins_api", array( $this, "setPluginInfo" ), 10, 3 );
         add_filter( "upgrader_post_install", array( $this, "postInstall" ), 10, 3 );
